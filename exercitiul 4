@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="personCtrl">
+
+A: <input type="number" ng-model="A"><br>
+B: <input type="number" ng-model="B"><br>
+<br>
+
+
+
+<br>
+{{ A+"+"+B+"="}}
+{{A+B}}
+<br>
+
+
+<br>
+{{ A+"-"+B+"="}}
+{{A-B}}
+<br>
+
+<br>
+{{ A+"*"+B+"="}}
+{{A*B}}
+<br>
+
+<br>
+{{ A+"/"+B+"="}}
+{{A/B}}
+<br>
+
+
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.A = "";
+    $scope.B = "";
+    $scope.Suma = function() {
+        return $scope.A + $scope.B;
+    };
+});
+</script>
+
+</body>
+</html>
