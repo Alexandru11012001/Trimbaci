@@ -1,0 +1,39 @@
+</script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+First Name: <input type="number" ng-model="a"><br>
+Last Name: <input type="number" ng-model="b"><br>
+<br>
+a+b: {{ a+"+"+b+"="}}
+{{a+b}}
+<br>
+
+<br>
+a-b: {{ a+"-"+b+"="}}
+{{a-b}}
+<br>
+
+<br>
+a*b: {{ a+"*"+b+"="}}
+{{a*b}}
+<br>
+
+<br>
+a/b: {{ a+"/"+b+"="}}
+{{a/b}}
+<br>
+
+
+
+
+
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+</script>
+</body>
+</html>
